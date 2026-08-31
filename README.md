@@ -1,163 +1,78 @@
-# Retail Sales Analysis Dashboard
+# Superstore Sales Performance Analysis Using Power BI
 
-A Business Analytics project that uses **Microsoft Power BI** and **MySQL** to analyze retail sales data and present the results through an interactive dashboard.
+A Business Analytics assignment (BCA, Semester V) that transforms the Superstore transaction dataset into a single, interactive Power BI dashboard for management to monitor sales performance and identify growth opportunities.
 
-## Project Overview
+## 📋 Project Overview
 
-The project focuses on connecting retail sales data from different sources, cleaning and transforming the data, and creating an interactive Power BI dashboard for business analysis.
+**Problem Statement:** As a Data Analyst working with a retail superstore chain, the goal is to evaluate overall sales performance across product categories, sub-categories, regions, individual products, and time — and present it in a single interactive dashboard covering total sales, total profit, quantity sold, and profit margin.
 
-The dashboard helps analyze:
-
-- Total sales
-- Sales by store
-- Sales by product category
-- Sales trends over time
-- Quantity sold by store
-- Customer-level sales details
-
-The project was completed as **Experiment No. 1 – Retail Sales Analysis Using Power BI & MySQL** for the BCA Business Analytics course.
-
-## Objectives
-
-- Import retail sales data from CSV/Excel and MySQL.
-- Connect MySQL data to Power BI Desktop.
-- Clean and transform the imported data.
-- Create relationships between relevant data tables.
-- Build interactive Power BI visualizations.
-- Analyze sales based on store, category, customer, and time.
-- Present business insights through a centralized dashboard.
-
-## Technologies Used
-
-| Technology | Purpose |
+| | |
 |---|---|
-| Microsoft Power BI Desktop | Data modeling, analysis, and dashboard creation |
-| MySQL | Retail sales database |
-| CSV / Excel | Source data |
-| Power Query | Data cleaning and transformation |
-| DAX | Power BI calculations and measures |
+| **Course** | Business Analytics |
+| **Program** | Bachelor of Computer Applications, Semester V |
+| **Assignment** | 2 |
+| **Author** | Varshith R (Reg. No. 2411021240072) |
+| **Institution** | Alliance University, Bengaluru |
+| **Faculty** | Mr. Aman Kumar Sharma |
+| **Tool Used** | Power BI Desktop |
 
-## Data Fields
+## 📊 Dataset
 
-The retail dataset contains important fields such as:
-
-- Transaction ID
-- Date
-- Customer ID
-- Gender
-- Age
-- Product Category
+The Superstore sales dataset contains transaction-level records with the following key fields:
+- Order ID
+- Order Date
+- Region
+- Category
+- Sub-Category
+- Product Name
+- Sales
+- Profit
 - Quantity
-- Price per Unit
-- Total Amount
-- Store
 
-## Dashboard Features
+## 🛠️ Methodology
 
-### 1. Total Sales
-A KPI card displays the overall sales amount generated from the transactions.
+1. **Data Collection** — Obtained the Superstore dataset and identified key fields for analysis.
+2. **Data Import** — Loaded the dataset into Power BI Desktop via Get Data.
+3. **Data Cleaning & Transformation** — Checked for missing/inconsistent values, verified data types, and created a calculated **Profit Margin** measure (Total Profit ÷ Total Sales).
+4. **Interface Exploration** — Used the Data and Visualizations panes to build KPI cards, column charts, bar charts, a line chart, and a stacked column chart.
+5. **Dashboard Development** — Arranged all visuals on a single report page to form a cohesive dashboard.
 
-### 2. Sales by Store
-A column chart compares sales across stores such as Bangalore, Kurnool, Chennai, and Hyderabad.
+## 📈 Dashboard Components
 
-### 3. Sales by Product Category
-The dashboard compares sales for:
+- **KPI Cards:** Total Sales, Total Profit, Total Quantity, Profit Margin
+- **Total Sales by Category** — Column chart (Technology, Furniture, Office Supplies)
+- **Total Sales by Region** — Bar chart (West, East, Central, South)
+- **Total Sales by Sub-Category** — Bar chart (Phones, Chairs, Storage, Tables, Binders, Machines)
+- **Total Sales by Product Name** — Bar chart ranking top-selling products
+- **Total Sales by Year** — Line chart showing the 2014–2017 sales trend
+- **Total Sales by Category and Region** — Stacked column chart of category sales broken down by region
 
-- Electronics
-- Clothing
-- Beauty
+## 🔍 Key Insights
 
-The project report identifies **Electronics** as the highest-selling category.
+- **Total Sales:** 2.30M
+- **Total Profit:** 286.40K
+- **Total Quantity:** 38K units
+- **Profit Margin:** 12.47%
+- **Top Category:** Technology, closely followed by Furniture and Office Supplies
+- **Top Region:** West, followed by East, Central, and South
+- **Top Sub-Category:** Phones, followed by Chairs, Storage, Tables, Binders, and Machines
+- **Top Products:** Canon imageCLASS 2200 Advanced copier and Fellowes PB500 Electric Punch Plastic Comb Binding Machine, among others
+- **Sales Trend:** Relatively flat from 2014–2015, then steady year-over-year growth through 2016 into 2017
+- **Regional Breakdown:** West and East contribute the largest sales share within every category
 
-### 4. Quantity Sold by Store
-This visualization compares the total quantity sold by each store. The report identifies **Bangalore** as having the highest quantity sold, followed by Kurnool, Hyderabad, and Chennai.
+## ✅ Conclusion
 
-### 5. Sales Trend
-A time-based visualization and monthly sales trend help identify periods of higher and lower sales.
+The Superstore sales dataset was successfully imported into Power BI and transformed into an interactive performance dashboard consolidating key metrics — total sales, total profit, quantity sold, and profit margin — alongside category, region, sub-category, product, and year-wise breakdowns. The analysis shows Technology as the leading sales category, West as the strongest-performing region, Phones as the top sub-category, and steady sales growth since 2015. This dashboard equips management with a clear, data-driven view for monitoring performance and identifying growth opportunities.
 
-### 6. Customer Sales Details
-A detailed table allows individual customer transactions to be examined using fields such as Customer ID, Month, Gender, Price per Unit, and Product Category.
+## 🎓 Learning Outcomes
 
-### 7. Product Category Filter
-An interactive filter allows users to select Beauty, Clothing, or Electronics and analyze the selected category.
+- Importing and preparing a retail sales dataset in Power BI
+- Building KPI cards to summarize key business metrics (sales, profit, quantity, margin)
+- Creating calculated measures such as profit margin
+- Using column, bar, line, and stacked column charts to compare performance across categories, regions, products, and time
+- Designing a single-page, multi-visual dashboard that communicates business insights clearly
+- Interpreting sales and profitability trends to support management decision-making
 
-## Data Preparation
+## 📁 Repository
 
-The following data preparation steps were performed:
-
-1. Collected the retail sales dataset in CSV format.
-2. Obtained retail sales data from MySQL.
-3. Created a `retail_db` database in MySQL.
-4. Created and populated the sales table.
-5. Connected Power BI Desktop to MySQL.
-6. Imported the required data.
-7. Checked for errors and missing values.
-8. Verified data types for fields such as Date, Quantity, Price per Unit, and Total Amount.
-9. Renamed fields where necessary.
-10. Prepared numerical fields for calculations and visualization.
-
-## Dashboard Preview
-
-The final dashboard contains KPI cards, column charts, a line chart, filters, and a customer sales table to provide an interactive view of retail performance.
-
-## How to Open the Project
-
-### Requirements
-
-- Windows
-- Microsoft Power BI Desktop
-- MySQL Server (required if recreating the MySQL connection)
-- The retail sales dataset
-
-### Steps
-
-1. Install **Power BI Desktop**.
-2. Download or clone this repository.
-3. Open the Power BI project file.
-4. If prompted, update the data-source settings.
-5. If using MySQL, make sure the MySQL server is running and the required `retail_db` database and sales table are available.
-6. Refresh the data.
-7. Open the report page to explore the dashboard.
-
-> **Note:** Power BI Desktop is required to edit or refresh the `.pbix` project. Data-source credentials and local MySQL settings may need to be configured on another computer.
-
-## Key Insights
-
-Based on the dashboard and project analysis:
-
-- Electronics has the highest sales among the displayed product categories.
-- Bangalore has the highest quantity sold among the analyzed stores.
-- Store-level and category-level comparisons help identify stronger sales contributors.
-- Monthly sales trends provide a view of changes in sales performance over time.
-- Customer-level details allow individual transactions to be examined.
-
-## Learning Outcomes
-
-Through this project, I learned how to:
-
-- Connect Power BI to CSV/Excel and MySQL data sources.
-- Import and organize data in Power BI.
-- Use Power BI Report View and Data View.
-- Work with the Data and Visualizations panes.
-- Create and format charts, tables, and KPI cards.
-- Analyze retail sales by category, store, customer, and time.
-- Apply filters for interactive analysis.
-- Build a retail sales dashboard for business analysis.
-- Present data-driven insights using Power BI.
-
-## Project Information
-
-**Student:** Varshith R  
-**Register Number:** 2411021240072  
-**Program:** Bachelor of Computer Applications (BCA)  
-**Semester:** V  
-**University:** Alliance University  
-**Subject:** Business Analytics  
-**Project:** Retail Sales Analysis Using Power BI & MySQL  
-**Date:** 22-08-2026
-
-## Conclusion
-
-The retail sales data was successfully connected to Power BI Desktop using CSV and MySQL data sources. After importing, cleaning, and organizing the data, an interactive dashboard was developed to analyze sales by store, product category, customer, and time.
-
-The project demonstrates how Power BI can be used to convert retail sales data into meaningful visual insights that support data-driven business decisions.
+More Business Analytics projects: [github.com/varshithramesh/Business-Analytics-Projects](https://github.com/varshithramesh/Business-Analytics-Projects)
